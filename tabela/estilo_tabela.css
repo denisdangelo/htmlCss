@@ -1,0 +1,53 @@
+@charset "UTF-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+/*todas as importações no css dever ser colocadas no inicio do código*/
+
+/*colocando fundo no corpo da pagina*/
+body{
+    background: url(img/ubuntu.jpg) no-repeat; /*background coloca o fundo selecionado na tag, pode ser imagem ou cor*/ 
+}
+
+table{
+    border: 2px solid #000000; /*border= borda, 2px = 2pixels de expessura. Solid = solida. Estilos de bordas: dotted, dashed, solid, double, groove, ridge, outset, inset*/ 
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-size: 3em;
+}
+
+td{
+    border: 2px solid black 
+}
+
+/*chamar a tag pelo ID. Támbem é possivle chamr só co #NomeDoID*/
+tr#menu{
+    background: #808080;
+    color: white;
+}
+
+.rodape{
+    background: #808080;
+    color: floralwhite;
+    font-size:1.2em;
+    font-weight: 500;
+}
+
+/*chamando a tag de ancora para mudar o estilo*/
+#menu a{
+    color:floralwhite;
+    text-decoration: none;
+}
+
+/*chamando as letras dos links para criar estilo para a seleção*/
+#menu :hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+/*validador do css*/

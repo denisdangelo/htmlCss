@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <title>Tabela</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo_tabela.css">
 </head>
 <body>
     <!-- table cria uma tabela -->
@@ -14,54 +15,52 @@
     <!-- td cria um quadrado -->
     <table>
         <tr>
-            <td>
+            <td colspan="3"><!--colspan mescla as celulas, 3 é a quantidade de bolcos mesclados-->
                 <h1>A história do Linux</h1>
             </td>
             <td>
                 <img src="img/tuxbatman.png" alt="tux batman" title="Tux Batman">
             </td>
         </tr>
-        <tr>
-            <td>Ubuntu</td>
-            <td>openSUSE</td>
-            <td>Red Hat</td>
-            <td>Debian</td>
+        <tr id="menu"><!--Id deve ser usado para identificar uma tag especifica e não pode se repetir-->
+            <td><a href="https://ubuntu.com/download">Ubuntu</a></td>
+            <td><a href="https://get.opensuse.org/pt_BR/">openSUSE</a></td>
+            <td><a href="https://www.redhat.com/pt-br">Red Hat</a></td>
+            <td><a href="https://www.debian.org/index.pt.html">Debian</a></td>
         </tr>
-        
         <tr>
-            <td><br></td> <!-- linha vazia/ pulando a linha-->
+            <td colspan="4"><br></td> <!-- linha vazia/ pulando a linha-->
         </tr>
-        
         <tr>
-            <td><img src="img/ubuntu.png" alt="Logo do ubuntu" title="Logo do Ubuntu"></td>
-            <td><h2>Ubuntu</h2></td>
+            <td colspan="3" rowspan="4"><!--rowspan alinha baseado na linha-->
+                <img src="img/ubuntu.png" alt="Logo do ubuntu" title="Logo do Ubuntu">
+            </td>
+            <td>
+                <h2>Ubuntu</h2>
+            </td>
         </tr>
-
         <tr>
             <td><h2>Red Hat</h2></td>
         </tr>
-        
         <tr>
             <td><h2>OpenSUSI</h2></td>
         </tr>
-        
         <tr>
             <td><h2>Debian</h2></td>
         </tr>
-        
         <tr>
-            <td><br></td>   
+            <td colspan="4"><br></td>   
         </tr>
-
         <tr>
-            <td>Rodapé</td>
+            <td class="rodape" colspan="4">Rodapé</td>
         </tr>
-        
-        <tr>
-            <td>Somente para fins educacionais</td>
+        <tr class="rodape">
+            <td colspan="4">Somente para fins educacionais</td>
         </tr>
     </table>
 
 
 </body>
 </html>
+
+<!--Validador do html: https://validator.w3.org/nu/#file-->
