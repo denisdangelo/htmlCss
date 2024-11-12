@@ -6,58 +6,57 @@
     font-weight: normal;
 }
 
-/*reset css*/
+/* RESET CSS*/
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
-/*variaveis*/
-/*root= raiz do documento = global*/
-:root {
-    --cor1: #c5ebd6;
-    --cor2: #83e1ad;
-    --cor3: #83e1ad;
-    --cor4: #2fa866;
+/* Variáveis */
+:root{
+    --cor1: #bccfed;
+    --cor2: #1c58c8;
+    --cor3: #3d67dc;
+    --cor4: #ff0000;
     --cor5: #1a5c37;
-    --cor6: #fff;
-    --cor7: #000;
-    --cor8: #f00;
-
-
-    --font-titulo: 'titulo';
-
+    --cor6: #FFF;
+    --cor7: #444444;
+    
+    --fonte-titulo:'titulo';
 }
 
-body {
-    background: var(--cor8);
+body{
+    background: var(--cor7);
 }
 
 #interface{
-    background: var(--cor6);
+    background-color: var(--cor1);
     max-width: 1200px;
     margin: 0 auto;
+    /* margin: 0 <- superior e inferior | auto <- esquerda e direita*/
+    /* pode ser colocado como 10px, 20px, 10px, 20px (superior, lateral direita, inferior, lateral esquerda)*/
 }
 
 .topo{
     height: 70px;
-    background: green;
-
+    background-color: var(--cor7);
 }
 
-.logo img{
-    margin: 10px 20px;
-    position: relative;
+#logo img{
+    margin: 10px 25px;
+    position: absolute;
 }
 
 .menu{
     display: block;
     position: absolute;
-    width: 800px; 
-    background: #fffbfb;
+    width: 800px;
     left: 800px;
+    top: 15px;
 }
+
 .menu ul{
     list-style: none;
     margin: 0px;
@@ -66,11 +65,273 @@ body {
 
 .menu li{
     float: left;
-    
 }
 
-h1 {
-    font: titulo;
+.menu li a{
+    text-decoration: none;
+    padding: 10px 25px;
+    color: var(--cor4);
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+}
+
+.menu li a:hover{
+    text-decoration: underline;
+    color: var(--cor7);
+}
+
+.banner_anime{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    margin: 0;
+}
+
+#anime1, #anime2{
+    max-width: 1200px;
+    height: auto;
+
+}
+
+.banner_anime img{
+    position: absolute; 
+    transition-property: opacity; /*tipo de transição*/
+    transition-duration: 1s; /*tempo de transição*/
+    transition-timing-function: linear; /*  ease, linear, ease-in, ease-out, aliviar-in-out, cubico-bezie*/
+}
+
+#anime1, #anime2:hover{
+    opacity: 1;
+}
+
+#anime1:hover, #anime2{
+    opacity: 0;
+}
+ /* Após o Banner*/
+h1{
+    font-family: titulo;
+    font-size: 2em;
+    margin: 30px 0px;
+    padding: 10px 0px;
+    text-align: center;
+    color: var(--cor4);
+}
+
+form{
+    width: 1000px;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px auto;
+}
+
+input, textarea, select{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--cor2);
+    font-size: 0.9em;
+}
+
+legend{
+    font: var(--fonte-titulo);
+    color: var(--cor6);
+    font-size: 1.5em;
+}
+
+fieldset{
+    border: 1px solid var(--cor4);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.sexo{
+    width: 250px;
+}
+
+#contato p{
+    padding: 5px;
+}
+
+.usuario{
+    background: url(img/icontato.png) no-repeat 95% 95%;
+}
+
+.endereco{
+    background: url(img/iendereco.png) no-repeat 95% 95%;
+}
+
+.mensagem{
+    background: url(img/imensagem.png) no-repeat 95% 95%;
+}
+
+.pedido{
+    background: url(img/ipgto.png) no-repeat 95% 95%;
+}
+
+.btn{
+    background: var(--cor5);
+    color: var(--cor1);
+    font-size: 1.1em;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 0px 5px 15px 5px;
+}
+
+#rodape{
+    border-top: 2px solid var(--cor4);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    clear: both;
+}
+
+#rodape p{
+    margin: 10px 0px;
+    font-size: 1.2em;
+    font-family: var(--fonte-titulo);
+}
+
+#rodape a{
+    text-decoration: none;
 }
 
 
+/*______________________________________________________
+Página de mídias
+*/
+
+.radio_tv{
+    background: url(img/radio-tv.png) no-repeat;
+    width: 75%;
+    height: 580px;
+    margin: 5px auto;
+}
+
+#filme{
+    width: 430px;
+    height: 380px;
+    display: block;
+    position: relative;
+    top: -30px;
+    left: 90px;
+}
+
+#musica{
+    display: block;
+    position: relative;
+    left: 575px;
+    top: 490px;
+}
+
+/*______________________________________________________
+Página de fotos
+*/
+
+.galeria1 p{
+    font-family: var(--fonte-titulo);
+    font-size:1.3em;
+    padding: 5px 15px;
+}
+
+.album_fotos{
+    width: 780px;
+    height: 550px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 50px;
+}
+
+.album_fotos li{
+    border: 3px solid var(--cor3);
+    width: 200px;
+    height: 200px;
+    background: var(--cor6);
+    margin: 6px;
+    float: left;
+    transition: all .4s ease-in;
+}
+
+.galeria{
+    background: rgba(0,0,0,0.5);
+    color: var(--cor1);
+    padding: 5px;
+    font-family: (--fonte-titulo);
+    font-size: 1.2em;
+    line-height: 357px;
+    opacity: 0;
+}
+/*hover serve para fazer a letra mudar quando coloca o mouse em cima*/
+.album_fotos li:hover .galeria{
+    opacity: 1;
+}
+
+.album_fotos li:hover{
+    transform: scale(1.5);
+}
+
+.album_fotos li.fotos01{
+    background: url(img/galeria1.jpg) no-repeat;
+    background-position: 50%, 50%;
+    background-size: 700px 500px;
+}
+
+.album_fotos li.fotos01:hover{
+    background-position: 0% 0%;
+    background-size: 200px 200px; 
+}
+
+.album_fotos li.fotos02{
+    background: url(img/galeria2.jpg) no-repeat;
+    background-position: 50%, 50%;
+    background-size: 700px 500px;
+}
+
+.album_fotos li.fotos02:hover{
+    background-position: 0% 0%;
+    background-size: 200px 200px; 
+}
+
+.album_fotos li.fotos03{
+    background: url(img/galeria3.jpg) no-repeat;
+    background-position: 50%, 50%;
+    background-size: 700px 500px;
+}
+
+.album_fotos li.fotos03:hover{
+    background-position: 0% 0%;
+    background-size: 200px 200px; 
+}
+
+.album_fotos li.fotos04{
+    background: url(img/galeria4.jpg) no-repeat;
+    background-position: 50%, 50%;
+    background-size: 700px 500px;
+}
+
+.album_fotos li.fotos04:hover{
+    background-position: 0% 0%;
+    background-size: 200px 200px; 
+}
+
+.album_fotos li.fotos05{
+    background: url(img/galeria5.jpg) no-repeat;
+    background-position: 50%, 50%;
+    background-size: 700px 500px;
+}
+
+.album_fotos li.fotos05:hover{
+    background-position: 0% 0%;
+    background-size: 200px 200px; 
+}
+
+.album_fotos li.fotos06{
+    background: url(img/galeria6.jpg) no-repeat;
+    background-position: 50%, 50%;
+    background-size: 700px 500px;
+}
+
+.album_fotos li.fotos06:hover{
+    background-position: 0% 0%;
+    background-size: 200px 200px; 
+}

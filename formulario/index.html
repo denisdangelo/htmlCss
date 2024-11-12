@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aqui você encontra o conteudo">
-    <meta name="keywords" content="jogos, game, playstation, xbox, nintendo, wii">
+    <meta name="keywords"
+        content="Aqui, você, escolhe, as palavras, chave, ou, chaves em conjunto, também, funciona, ok?...">
+    <meta name="description" content="Aqui você encontra conteúdos...">
+    <title>Games</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Games</title>
 </head>
 
 <body>
-    <!-- div é uma divisão como um tipo de caixa para movimentar o conteudo   -->
-    <!-- header   -->
-    <!-- nav menu de navegação   -->
+    <!-- Interface geral antigo CONTAINER-->
     <div id="interface">
+        <!-- Cabeçalho -->
         <header class="topo">
-            <img src="/formulario/img/logo.png" alt="logo controle de videogame">
-
+            <!-- Image logo-->
+            <img src="img/logo.png" alt="Aqui está o logo, um controle de videogame"    >
+            <!-- Navegação - menu com -->
             <nav class="menu">
                 <ul>
                     <li><a href="index.html">Contatos</a></li>
@@ -27,74 +28,78 @@
                 </ul>
             </nav>
 
-
         </header>
 
         <div class="banner_anime">
-            <img src="img/banner1.jpg" alt="Jogo God of War" title="Kratos" id="animal">
-            <img src="img/banner2.jpg" alt="Jogo God of War" title="Kratos" id="animal">
+
+            <img src="img/banner1.jpg" alt="Jogo God of War" title="Kratos" id="anime1">
+            <img src="img/banner2.jpg" alt="Jogo God of War" title="Kratos" id="anime2">
         </div>
 
         <h1>Entre em contato conosco</h1>
-
-        <form action="mailto:denis@email.com">
-            <fieldset><!--conj de campos-->
+        <!-- FORMULÁRIO -->
+        <form action="maiolto:denis@email.com" method="post">
+            <fieldset class="usuario"> <!-- Conjunto de campos -->
                 <legend>Identificação do usuário</legend>
                 <p>
                     <label for="cnome">Nome:</label>
-                    <input type="text" name="nome" id="cnome" size="30" maxlength="50" placeholder="Nome Completo"
+                    <input type="text" name="nome" id="cnome" size="30" maxlength="50" placeholder="Nome completo"
                         required autofocus>
+                    <!-- size = tamanho do campo | maxlength = quantidade maxima de caracteres | placeholder = texto dentro do input | required = obrigatório o preenchimento do campo | autofocus = campo de preenchimento já selecionado-->
                 </p>
 
                 <p>
-                    <label for="cemail">E-mail</label>
-                    <input type="email" name="email" id="cemail" size="30" maxlength="50" placeholder="Digite seu email"
+                    <label for="cemail">E-mail:</label>
+                    <!-- Quando type e-mail o navegador obrigad o preenchimento de um @ no campo-->
+                    <input type="email" name="email" id="cemail" size="30" maxlength="50"
+                        placeholder="Digite seu e-mail" required>
+                </p>
+
+                <p>
+                    <!-- quando type password/senha o navegador esconde os caracteres que são digitados com *******-->
+                    <label for="csenha">Senha:</label>
+                    <input type="password" name="senha" id="csenha" size="8" maxlength="8" placeholder="8 dígitos"
                         required>
                 </p>
 
-                <p>
-                    <label for="csenha">Senha</label>
-                    <input type="password" name="senha" id="csenha" size="8" placeholder="8 digitos" required>
-                </p>
-
                 <fieldset class="sexo">
-                    <legend>Sexo</legend>
+                    <!--Quando radio são bolinhas de seleção única, mas o campo name deve ser igual nas opções deste campo-->
+                    <legend>Sexo:</legend>
                     <p>
                         <input type="radio" name="sexo" id="cfem">
-                        <label for="cfem">Feminino</label>
+                        <label for="cfem"> Feminino</label>
                     </p>
-
                     <p>
                         <input type="radio" name="sexo" id="cmasc">
-                        <label for="cmasc">Masculino</label>
+                        <label for="cmasc"> Masculino</label>
                     </p>
-
                     <p>
                         <input type="radio" name="sexo" id="coutros">
-                        <label for="coutros">Outros</label>
+                        <label for="coutros"> Outros</label>
                     </p>
-
-
                 </fieldset>
+
                 <p>
-                    <label for="cnasc">Data de nascimento</label>
-                    <input type="date" name="nasc" id="cnasc">
+                    <!-- quando type date o navegador sugere um calendário e padroniza o tipo de preenchimento no campo DD/MM/AAAA-->
+                    <label for="cnasc">Data de nascimento:</label>
+                    <input type="date" name="nasc" id="cnasc" maxlength="8">
                 </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="endereco">
                 <legend>Endereço do usuário</legend>
-                <p>
-                    <label for="crua">Logradouro</label>
-                    <input type="text" name="rua" id="crua" size="50" maxlength="50"
-                        placeholder="Rua, Avenida, Travessa,">
-                </p>
-                <p>
-                    <label for="cnum">Numero</label>
-                    <input type="number" name="cnum" id="cnum" min="0" max="99999">
-                </p>
-                <p>
-                    <label for="cest">Estado</label>
 
+                <p>
+                    <label for="crua">Logradouro:</label>
+                    <input type="text" name="rua" id="crua" size="50" maxlength="50" placeholder="Rua, Av., Trav...">
+                </p>
+
+                <p>
+                    <label for="cnum">Número:</label>
+                    <input type="number" name="num" id="cnum" min="0" max="999999">
+                </p>
+
+                <p>
+                    <label for="cest">Estado:</label>
                     <select name="est" id="cest">
                         <optgroup label="Região Sudeste">
                             <option value="SP">São Paulo</option>
@@ -102,83 +107,83 @@
                             <option value="MG">Minas Gerais</option>
                             <option value="ES">Espirito Santo</option>
                         </optgroup>
+
                         <optgroup label="Região Sul">
-                            <option value="SC" selected>Santa Catarina</option>
-                            <option value="PR">Parana</option>
-                            <option value="RS">Rio Grade do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
                         </optgroup>
                     </select>
                 </p>
                 <p>
-                    <label for="ccid">Cidade</label>
-                    <input type="text" name="cid" id="ccid" size="40" maxlength="40" placeholder="Sua Cidade">
+                    <label for="ccid">Cidade:</label>
+                    <input type="text" name="cid" id="ccid" size="40" maxlength="40" placeholder="Sua cidade">
                 </p>
             </fieldset>
-            <fieldset id="mensagem">
+            <fieldset class="mensagem">
                 <legend>Mensagem do usuário</legend>
                 <p>
-                    <label for="curg">Grau de urgência</label>
+                    <label for="curg">Grau de urgência:</label>
                     Mín <input type="range" name="urg" id="curg" min="0" max="10" step="1"> Máx
                 </p>
+
                 <p>
                     <label for="cmsg">Mensagem:</label>
                 </p>
+
                 <p>
-                    <textarea name="msg" id="cmsg" cols="70" rows="7" placeholder="Seu Texto Aqui" required></textarea>
+                    <textarea name="msg" id="cmsg" cols="70" rows="7" placeholder="Digite sua mensagem aqui..."
+                        required></textarea>
                 </p>
             </fieldset>
-            <fieldset id="pedido">
+            <fieldset class="pedido">
                 <legend>Quero um console</legend>
                 <p>
                     <input type="checkbox" name="ped" id="cped">
                     <label for="cped">Gostaria de adquirir um console quando disponível</label>
-
                 </p>
                 <p>
-                    <label for="ccon">Console</label>
+                    <label for="ccon">Console:</label>
                     <select name="game" id="ccon">
-                        <option value="Ps">PlayStation</option>
+                        <option value="Ps">Playstation</option>
                         <option value="Xbox">Xbox</option>
                         <option value="NES">Nintendo</option>
                     </select>
                 </p>
                 <p>
                     <label for="ccor">Cor:</label>
-                    <input type="color" name="cor" id="ccor" value="#0000F">
+                    <input type="color" name="cor" id="ccor" value="#0000FF">
+                </p>
+
+                <p>
+                    <label for="cqtde">Qtde:</label>
+                    <input type="number" name="qtde" id="cqtde" min="0" max="5" value="0" oninput="calc_total()">
                 </p>
                 <p>
-                    <label for="cqtde">Quantidade</label>
-                    <input type="number" name="qtde" id="cqtde" min="0" max="5" value="0">
+                    <label for="ctot">Preço: Total:</label>
+                    <input type="text" name="tot" id="ctot" placeholder="Total a pagar" readonly>
                 </p>
-                <p>
-                    <label for="ctot">Preço total: R$</label>
-                    <input type="text" name="tot" id="ctot" placeholder="Totao a Pagar" readonly>
-                </p>
-                <fieldset>
-                    <button type="submit" name="enviar" class="btn">Enviar</button>
-                    <button type="reset" name="limpar" class="btn">Limpar</button>
-                </fieldset>
             </fieldset>
+            
+            <button type="submit" name="enviar" class="btn">Enviar</button>
+            <button type="reset" name="limpar" class="btn">Limpar</button>
         </form>
 
         <footer id="rodape">
             <p>
-                Somente para fins Educativos
+                Somente para fins educativos
             </p>
             <p>
-                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png"
-                        alt="Rede Social Instagram"></a>
-                <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png"
-                        alt="Rede Social Facebook"></a>
-                <a href="https://github.com/" target="_blank"><img src="img/github.png" alt="Rede Social GitHub"></a>
-                <a href="https://www.youtube.com/" target="_blank"><img src="img/youtube.png"
-                        alt="Rede Social Youtube"></a>
-                <a href="https://br.linkedin.com/" target="_blank"><img src="img/linkedin.png"
-                        alt="Rede Social Linkedin"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://br.linkedin.com/" target="_blank"><img src="img/linkedin.png" alt="Linkedin"></a>
+                <a href="https://twitter.com/?lang=pt-br" target="_blank"><img src="img/x_twitter.png" alt="X - Twitter"></a>
+                <a href="https://github.com/" target="_blank"><img src="img/github.png" alt="GitHub"></a>
+                <a href="https://youtube.com/" target="_blank"><img src="img/youtube.png" alt="GitHub"></a>
             </p>
         </footer>
     </div>
-
+    <script src="funcoes.js"></script>
 </body>
 
 </html>
