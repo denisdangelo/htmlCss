@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* fontes externas https://fonts.google.com/selection/embed & https://fonts.google.com/selection/embed*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*variaveis css :root = global*/
+:root{
+    --cor1: #e8e8e8;
+    --cor2: #a1a1a1;
+    --cor3: #434343;
+    --cor4: #173261;
+    --cor5: #fff;
+    --cor6: #0000;
+
+    --titulo: 'Bebas Neue', sans-serif;
+    --texto: "Ubuntu Mono", sans-serif;
+
+}
+
+/*reset css*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: gray;
+}
+/*Layout*/
+.container{
+    display: flex;
+}
+
+
+/*SMARTFONE PORTRAIT - CELULAR EM PÉ*/
+
+/*SMARTFONE LANDSCAPE - CELULAR DEITADO*/
+@media (min-width:576px){
+    body{
+        background: blue;
+    }
+}
+
+
+/*TABLET PORTRAIT*/
+@media (min-width:768px){
+    body{
+        background: pink;
+    }
+}
+
+/*TABLET LANDSCAPE*/
+@media (min-width:992px){
+    body{
+        background: goldenrod;
+    }
+}
+
+
+/*PC*/
+
+@media (min-width:1200px){
+    body{
+        background: firebrick;
+    }
+}
+
+
