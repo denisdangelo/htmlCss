@@ -33,16 +33,76 @@ body{
 }
 /*Layout*/
 .container{
-    display: flex;
+    margin: 0 auto;
+    background: blueviolet;
 }
 
+.flex{
+    display: flex;
+    justify-content: space-between;
+    background: #173261;
+}
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 
 /*SMARTFONE PORTRAIT - CELULAR EM PÉ*/
+/*cabeçalho*/
+header{
+    height: 60px;
+
+}
+
+#check{
+    display: none;
+}
+
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+}
+
+nav ul{
+    list-style: none;
+    background: var(--cor3);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: var(--cor2) 1px solid;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:var(--cor1);
+    font-family: var(--texto);
+    font-size: 1.2em;
+}
+/*quando o id check estiver checada muda (~) a propriedade da ul*/
+#check:checked ~ ul{
+    right: 0;
+}
 
 /*SMARTFONE LANDSCAPE - CELULAR DEITADO*/
 @media (min-width:576px){
     body{
         background: blue;
+
+    }
+    .container {
+        max-width: 540px;
     }
 }
 
@@ -52,12 +112,18 @@ body{
     body{
         background: pink;
     }
+    .container{
+        max-width: 720px;
+    }
 }
 
 /*TABLET LANDSCAPE*/
 @media (min-width:992px){
     body{
         background: goldenrod;
+    }
+    .container{
+        max-width: 960px;
     }
 }
 
@@ -67,6 +133,17 @@ body{
 @media (min-width:1200px){
     body{
         background: firebrick;
+    }
+    .container{
+        max-width: 1140px;
+    }
+    /*cabeçalho*/
+    header{
+        height: 130px;
+    }
+    .logo img{
+        margin-top: 30px;
+        margin-left: 30px;
     }
 }
 

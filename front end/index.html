@@ -12,12 +12,13 @@
 <body>
     <!--Cabeçalho-->
     <header id="inicio">
-        <div class="container">
-            <div>
-                <img src="img/logo_front.jpg" alt="Logo Front End">
+        <!--div com duas classes. Container e Flex-->
+        <div class="container flex">
+            <div class="logo">
+                <img src="img/logo_front.png" alt="Logo Front End">
             </div>
             <nav class="menu">
-                <input type="checkbox" name="checkbox" id="checkbox">
+                <input type="checkbox" name="check" id="check">
                 <label for="check">&#x2630;</label>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -31,35 +32,60 @@
 
     <!--Destaque-->
     <main>
-        <h1>FRONT END</h1>
-        <h2>Damos vida aos seus negócios digitais.</h2>
+        <div class="container">
+            <h1>FRONT END</h1>
+            <h2>Damos vida aos seus negócios digitais.</h2>
+        </div>
     </main>
     
      <!--Seções - devem ter título-->
      <!--Sobre-->
     <section id="sobre">
-        <h2>Front End</h2>
+        <div class="container">
+            <h2>Front End</h2>
+        </div>
     </section>
 
      <!--Video On Page-->
     <section>
-        <h2>One Page Site</h2>
+        <div class="container">
+            <h2>One Page Site</h2>
+        </div>
     </section>
 
     <!--Wireframe - PDF-->
-    <section>
-        <h2>Wireframe</h2>
+    <section id="Wireframe">
+        <div class="container">
+            <h2>Wireframe</h2>
+        </div>
     </section>
 
     <!--Conteudo - Cards-->
     <section id="conteudo">
-        <h2>Conteúdo</h2>
-        <h3>HTML5</h3>
-        <h3>CSS3</h3>
-        <h3>JavaScript</h3>
+        <div class="container">
+            <h2>Conteúdo</h2>
+            <h3>HTML5</h3>
+            <h3>CSS3</h3>
+            <h3>JavaScript</h3>
+        </div>
     </section>
 
     <!--Rodapé-->
-    <footer id="contato"></footer>
+    <footer id="contato">
+        <div class="container">
+            <div class="copyrigth">
+                <p>&#169; 2024 - Somente para fins educativos.</p>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt=""></a>
+                <a href="https://x.com/?lang=pt-br" target="_blank"><img src="img/x_twitter.png" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt=""></a>
+                <a href="https://www.whatsapp.com/?lang=pt_BR" target="_blank"><img src="img/whatsapp.png" alt=""></a>
+                <a href="https://www.linkedin.com/uas/login-submit" target="_blank"><img src="img/linkedin.png" alt=""></a>
+                <a href="https://github.com/" target="_blank"><img src="img/github.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <a href="#inicio" id="topo"><img src="img/topo.png" alt="para o inicio do site"></a>
 </body>
 </html>
