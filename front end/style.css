@@ -25,22 +25,18 @@
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 
 }
 
-/*body{
-    background: gray;
-}*/
+body{
+    background: var(--cor2);
+}
 /*Layout*/
 .container{
     margin: 0 auto;
     
-}
-
-.flex{
-    display: flex;
-    justify-content: space-between;
 }
 
 #topo{
@@ -52,13 +48,46 @@
 .botao{
     text-decoration: none;
     color: var(--cor1);
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 700;
     background: var(--cor4);
     border: 1px solid var(--cor1);
     border-radius: 25px;
     padding: 10px 40px;
 }
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.flex3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex5{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .card{
     margin-top: 25px;
     width: 340px;
@@ -113,7 +142,7 @@ nav ul{
     top: 60px;
     right: -100%;
     width: 100%;
-    transition: all 0.5s;
+    transition: all 0.50s;
 
 }
 
@@ -155,6 +184,66 @@ main h2{
 
 }
 
+/*SOBRE*/
+#sobre {
+    background: url(img/background5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+}
+
+.destaque_sobre {
+    display: none;
+}
+
+.texto_sobre {
+    color: var(--cor6);
+    padding: 0px 10px;
+    font-family: var(--texto);
+}
+
+.texto_sobre h2 {
+    margin-bottom: 10px;
+    font-family: var(--titulo);
+    font-size: 2em;
+}
+
+.texto_sobre p {
+    font-size: 1.4em;
+}
+
+.topico_sobre {
+    margin-top: 20px;
+}
+
+.topico_sobre img {
+    margin-right: 10px;
+}
+
+/*ONE PAGE*/
+#onepage {
+    padding: 50px 0px;
+
+}
+
+#onepage h2 {
+    font-family: var(--titulo);
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+#onepage p {
+    font-family: var(--texto);
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.video iframe {
+    width: 340px;
+    height: 190px;
+}
+
+
 /*Seção wireframe*/
 #wireframe{
     padding: 50px 0px;
@@ -193,6 +282,46 @@ main h2{
 
 }
 
+address{
+    padding: 35px 10px 50px 10px;
+    background-image: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor1);
+}
+
+address a{
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+address img{
+    padding-top: 15px;
+}
+
+.icone_local{
+    display: none;
+}
+
+.dados{
+    margin: 30px 0px 15px 0px;
+}
+
+.google_maps{
+    display: none;
+}
+
+footer{
+    padding: 50px;
+    background: var(--cor3);
+    color: var(--cor1);
+    text-align: center;
+}
+
+.social{
+    margin: 15px 0px;
+}
+
 /*SMARTFONE LANDSCAPE - CELULAR DEITADO*/
 @media (min-width:576px){
     /*body{
@@ -208,7 +337,20 @@ main h2{
      main h1, main h2{
         text-shadow: var(--cor6) 0.5em 0.5em 0.5em;
      }
+
+     /*Rodape*/
+     .flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .social{
+     margin: 0px;   
+    }
 }
+
+
 
 
 /*TABLET PORTRAIT*/
@@ -284,7 +426,7 @@ main h2{
         border: 0;
      }
      nav ul li a{
-        color: var(--cor1);
+        color: var(--cor3);
      }
      nav ul li a:hover{
         color: blue;
@@ -299,5 +441,28 @@ main h2{
         display: inline;
 
      }
+
+     /*RODAPE*/
+     .icone_local{
+        display: inline;
+     }
+
+     .icone_mapa{
+        display: none;
+     }
+
+     .google_maps{
+        display: inline;
+     }
+
+     .flex6{
+        flex-direction: row-reverse;
+     }
+
+     address{
+        font-size: 1.3em;
+        font-family: var(--texto);
+        font-weight: 700;
+     } 
 
 }
