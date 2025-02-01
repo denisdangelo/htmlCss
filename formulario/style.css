@@ -111,7 +111,7 @@ body{
 }
  /* Após o Banner*/
 h1{
-    font-family: titulo;
+    font-family: var(--fonte-titulo);
     font-size: 2em;
     margin: 30px 0px;
     padding: 10px 0px;
