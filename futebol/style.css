@@ -1,1 +1,53 @@
+.bg-custom {
+	background-color: rgba(81, 2, 155, 0.774);
+}
 
+.banner-item img {
+	width: 100%;
+	height: auto;
+ }
+ 
+ 
+ .banner-text h1{
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	width: 80%;
+	text-align: left;
+	z-index: 2;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	font-size: 5em;
+ }
+
+ .banner-text h2{
+	position: absolute;
+	top: 65%;
+	left: 20px;
+	width: 80%;
+	text-align: left;
+	z-index: 2;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	font-size: 3em;
+ }
+
+ .american{
+	color: rgba(81, 2, 155, 0.774) ;
+ }
+
+ .latest{
+	color: rgba(81, 2, 155, 0.774) ;
+ }
+
+ .btn-custom1{
+	background-color: rgba(81, 2, 155, 0.774) ;
+	color: white;
+ }
+
+ .btn-custom2{
+	background-color: #f8d574;
+	color: black;
+	font-weight: bold;
+ }
